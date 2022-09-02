@@ -3,19 +3,6 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <style>
 
-.body {
-  font-family: 	Times New Roman;
-  padding-left: 17%;
-}
-
-.article {
-  background-color: #F8F8F8;
-  padding: 5vh;
-  border-bottom-style: solid;
-  border-width: 17px;
-  border-color: white;
-}
-
 pre {
   font-family: 	Times New Roman;
 }
@@ -53,10 +40,54 @@ nav button:hover {
 }
 
 nav button.active {
-  background-color: white;
+  background-color: #D7D7D7;
+}
+
+.body {
+  font-family: 	Times New Roman;
+  padding-left: 17%;
+}
+
+.intro {
+  background-color: #F8F8F8;
+  padding: 5vh;
+  border-bottom-style: solid;
+  border-width: 17px;
+  border-color: white;
+}
+
+.article {
+  display: none;
+  background-color: #F8F8F8;
+  padding: 5vh;
+  border-bottom-style: solid;
+  border-width: 17px;
+  border-color: white;
+  animation: fadeEffect 1s;
+}
+
+@keyframes fadeEffect {
+  from {opacity: 0;}
+  to {opacity: 1;}
 }
 
 </style>
+
+<script>
+  function openTab(event, id) {
+    var i, articles, links;
+    articles = document.getElementsByClassName("article");
+    for (i = 0; i < articles.length; i++)
+      articles[i].style.display = "none"
+
+    links = document.getElementsByClassName("link");
+    for (i = 0; i < links.length; i++)
+      links[i].className = links[i].className.replace(" active", "");
+
+    document.getElementById(id).style.display = "block";
+    event.currentTarget.className += " active";
+  }
+</script>
 
 <head>
   <title> Website Tutorial </title>
@@ -69,7 +100,7 @@ nav button.active {
 
 <body>
   <br>
-  <div class='article'>
+  <div class='intro'>
     <h3 style='text-align:center'> Introduction </h3>
     <pre style='text-align:center'>
       So, you want to make your own website, huh? There is I call the five stages of developing a website. This will not be an easy journey, and you WILL most definitely suffer a lot.
@@ -82,11 +113,11 @@ nav button.active {
 
   <nav>
     <h3 style='text-align: center'> Table of Contents </h3>
-    <button onclick="openTab(event, '1')"> Learn HTML </button>
-    <button href='#2'> Play Around </button>
-    <button href='#3'> Annoying Issues </button>
-    <button href='#4'> Run Into a Block </button>
-    <button href='#5'> Create Your Website </button>
+    <button class="link" onclick="openTab(event, '1')"> Learn HTML </button>
+    <button class="link" onclick="openTab(event, '2')"> Play Around </button>
+    <button class="link" onclick="openTab(event, '3')"> Annoying Issues </button>
+    <button class="link" onclick="openTab(event, '4')"> Run Into a Block </button>
+    <button class="link" onclick="openTab(event, '5')"> Create Your Website </button>
   </nav>
 
   <div class="body">
