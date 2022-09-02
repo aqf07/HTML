@@ -38,19 +38,22 @@ nav {
   background-color:#F8F8F8
 }
 
-nav a {
+nav button {
+  background-color: inherit;
   display: block;
-  color: black;
-  text-decoration: none;
+  border: none;
+  outline: none;
   padding: 10% 10vh;
-  text-align: left;
-  font-size: 110%;
-  text-align: center;
+  transition: 0.3s;
+  overflow: hidden;
 }
 
-nav a:hover {
+nav button:hover {
   background-color: white;
-  text-align: center;
+}
+
+nav button.active {
+  background-color: white;
 }
 
 </style>
@@ -69,19 +72,21 @@ nav a:hover {
   <div class='article'>
     <h3 style='text-align:center'> Introduction </h3>
     <pre style='text-align:center'>
-      So, you want to make your own website, huh? This will not be an easy journey, and you WILL most definitely
-      suffer a lot. In the end, while you may have created the perfect website, both your eyes and fingers will absolutely
-      remember the excruciaating pain you put them under. You have been warned.
+      So, you want to make your own website, huh? There is I call the five stages of developing a website. This will not be an easy journey, and you WILL most definitely suffer a lot.
+      In the end, while you may have created the perfect website, both your eyes and fingers will absolutely remember the excruciating pain you put them under,
+      and they will not forgive you. You have been warned.
+
+
     </pre>
   </div>
 
   <nav>
     <h3 style='text-align: center'> Table of Contents </h3>
-    <a href='#1'> Learn HTML </a>
-    <a href='#2'> Play Around </a>
-    <a href='#3'> Annoying Issues </a>
-    <a href='#4'> Run Into a Block </a>
-    <a href='#5'> Create Your Website </a>
+    <button onclick="openTab(event, '1')"> Learn HTML </button>
+    <button href='#2'> Play Around </button>
+    <button href='#3'> Annoying Issues </button>
+    <button href='#4'> Run Into a Block </button>
+    <button href='#5'> Create Your Website </button>
   </nav>
 
   <div class="body">
