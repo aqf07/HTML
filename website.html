@@ -1,145 +1,48 @@
 <!DOCTYPE html>
 <html lang=en-US>
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<style>
-
-p {
-  font-family: Monaco
-}
-
-body {
-  background-color: #FCFAF3;
-}
-
-header {
-  background-color: #EDE9DA;
-  padding: 10vh;
-  text-align: center;
-  font-size: 20x;
-  font-family: Monaco;
-  background-image: url('https://www.thoughtco.com/thmb/uRTXMGDPKDDdXYXkIXnL6JYF27A=/3867x2175/smart/filters:no_upscale()/GettyImages-453316791-56d9ce413df78c5ba029d700.jpg');
-  background-repeat: no-repeat;
-  background-size: cover;
-}
-
-nav {
-  float: left;
-  width: 15%;
-  height: 100vh;
-  background-color: #EDE9DA;
-  font-size: 120%;
-}
-
-nav button {
-  background-color: inherit;
-  display: block;
-  border: none;
-  outline: none;
-  width: 100%;
-  height: 7%;
-  font-size: 100%;
-  transition: 0.3s;
-  font-family: Monaco;
-  overflow: auto;
-}
-
-nav button:hover {
-  background-color: #FCFAF3;
-}
-
-nav button.active {
-  background-color: #D3CDBA;
-}
-
-.body {
-  font-family: 	Monaco;
-  padding-left: 17%;
-}
-
-.intro {
-  background-color: #D3CDBA;
-  padding: 5vh;
-  border-bottom-style: solid;
-  border-width: 17px;
-  border-color: #FCFAF3;
-  font-size: 120%;
-}
-
-.article {
-  display: none;
-  background-color: #EDE9DA;
-  padding: 5vh;
-  border-bottom-style: solid;
-  border-width: 17px;
-  border-color: #FCFAF3;
-  animation: fadeEffect 0.3s;
-  font-size: 120%;
-  height: 90vh;
-}
-
-@keyframes fadeEffect {
-  from {opacity: 0;}
-  to {opacity: 1;}
-}
-
-table {
-  border-collapse: collapse;
-  width: 100%;
-}
-
-td, th {
-  border: 1px solid #D3CDBA;
-  text-align: left;
-  padding: 8px;
-}
-
-tr:nth-child(even) {
-  background-color: #D3CDBA;
-}
-
-</style>
-
-<script>
-  function openTab(event, id) {
-    var i, articles, links;
-    articles = document.getElementsByClassName("article");
-    for (i = 0; i < articles.length; i++)
-      articles[i].style.display = "none"
-
-    links = document.getElementsByClassName("link");
-    for (i = 0; i < links.length; i++)
-      links[i].className = links[i].className.replace(" active", "");
-
-    document.getElementById(id).style.display = "block";
-    event.currentTarget.className += " active";
-  }
-</script>
 
 <head>
-  <title> Website Tutorial </title>
+  <title> How To Make a Website </title>
   <link rel='icon' type="image/x-icon" href='https://i.kym-cdn.com/photos/images/newsfeed/002/322/154/667.jpg'>
+  <link rel="stylesheet" href="websiteStyle.css">
+  <script>
+    function openTab(event, id) {
+      var i, articles, links;
+      articles = document.getElementsByClassName("article");
+      for (i = 0; i < articles.length; i++)
+        articles[i].style.display = "none"
+
+      links = document.getElementsByClassName("link");
+      for (i = 0; i < links.length; i++)
+        links[i].className = links[i].className.replace(" active", "");
+
+      document.getElementById(id).style.display = "block";
+      event.currentTarget.className += " active";
+    }
+  </script>
 </head>
 
 <body>
   <header>
-    <h1> How to Make a Website </h1>
+    <h1> How To Make a Website </h1>
   </header>
   <br>
   <div class='intro'>
-    <h3 style='text-align:center'> Introduction </h3>
-    <p style='text-align:center'>
+    <h3> Introduction </h3>
+    <p>
       So, you want to make your own website, huh? This will not be an easy journey, and you WILL most definitely suffer a lot.
       In the end, while you may have created the perfect website, both your eyes and fingers will absolutely remember the excruciating pain you put them under,
-      and the trauma of html sizing making absolutely zero sense will stay at the back of your head for quite a while. You have been warned &#128522;.
-
-      When you first start learning and building a website, you will experience five stages of emotions. At least, that is what happened to me, so in a way,
-      this whole website is a documentation of my own learning process. However, that would  make my website a blog, which is <b> extremely </b> boring and
-      uninteresting. So, I decided to share my experience a different way --- in the form of a tutorial.
+      and the trauma of misaligned textboxes will stay at the back of your mind for quite a while. You have been warned &#128522;. <br><br>
+      When you first start learning and building a website, you will experience five different stages of emotions. At least, that is what happened to me, so in a way,
+      this whole website is a documentation of my own learning process. However, that would make my website some lame blog. So, I decided to share my experience a different way --- in the form of a tutorial.
+      <br><br><br> <i> NOTE: I am <b>NOT</b> a professional website designer or anything remotely close to that, so while there are actual tips inside this website, please do not
+      take anything too seriously. </i>
     </p>
   </div>
 
   <nav>
-    <h3 style='text-align: center'> Table of Contents </h3>
+    <h3> Table of Contents </h3>
     <button class="link" onclick="openTab(event, '1')"> Intrigue </button>
     <button class="link" onclick="openTab(event, '2')"> Curiousity </button>
     <button class="link" onclick="openTab(event, '3')"> Frusturation </button>
@@ -153,10 +56,11 @@ tr:nth-child(even) {
       <p>
         At first, of course you'll be intrigued at the idea of building your own website, and you'll definitely have a lot of questions about how to do so.
         The first step of creating a website is learning <i>how</i> to make one (obviously). Almost all websites are written in a language called <abbr title="Hypertext Markup Language"> HTML </abbr>. HTML is not a way to format and
-        decorate your website but a way to organize the base logic of your website.
-        There are also countless websites out there that have tutorials on the language. The one I recommend (which, not coincidentally, is also the one I used) is <a href="https://www.w3schools.com/html/default.asp"> W3Schools </a>.
-        It has an article dedicated to basically everything in HTML. Even as I'm writing this very paragraph, I'm constantly referring back W3Schools.
-        HTML organizes an website with <i>tags</i>, and everything should go in a tag. The way you would write this is &lt;tag&gt; content &lt;/tag&gt;. As a summary, here are the most important tags to know:
+        decorate your website but a way to organize its foundational logic.
+        There are countless websites out there that have tutorials on the HTML. The one I recommend (which, not coincidentally, is also the one I used) is <a href="https://www.w3schools.com/html/default.asp"> W3Schools </a>.
+        It has an article dedicated to basically every aspect of HTML. Even as I'm writing this very paragraph, I'm constantly referring back the website.
+        HTML organizes websites with <i>tags</i>, and everything should go in a tag. The way you would write this is <br><br>
+        <span>&lt;tag&gt; content &lt;/tag&gt;.</span><br><br> As a summary, here are the most important tags to know:
         <hr>
         <table>
           <tr>
@@ -197,7 +101,7 @@ tr:nth-child(even) {
           </tr>
         </table>
         <hr>
-      Of course, there are a lot, and I mean <b>a lot</b>, of other tags, but with these 6 tags, you can probably create a coherent website at least.
+      Of course, there are a lot, and I mean <b>a lot</b>, of other tags, but with these 6, you can probably create a coherent website at least.
       </p>
     </div>
 
@@ -211,8 +115,8 @@ tr:nth-child(even) {
           <hr>
           And something like that, is absolutely terrible. Where are all the colors, the fonts, the style?
           <b>Style</b> is a tag attribute that adds styles to an element in HTML. With style, you can change colors, fonts, sizes, backgrounds, and way more.
-          The syntax of style is <br><br>
-          <span style="color: #868173"> &lt;tag style="property1: value1 property2: value2..."&gt; content &lt;tag&gt;. </span> <br><br>
+          The syntax of using style is <br><br>
+          <span> &lt;tag style="property1: value1 property2: value2..."&gt; content &lt;tag&gt;. </span> <br><br>
           The style options that are most commonly used include
           <ul>
             <li> color </li>
@@ -225,7 +129,7 @@ tr:nth-child(even) {
             <li> width </li>
           </ul>
           With these style properties, you can make your website 100 times better than the hot garbage it was before! Note that there are also other attributes like
-          href (attaches a link to text), src (provides the source of an image), class, id, etc, but <del>I'm getting lazy</del> that's for you to learn on your own.
+          href (attaches a link to text), src (provides the source of an image), class, id, etc, but <del>I'm getting lazy</del> that's for you to discover and learn on your own.
         </p>
     </div>
 
@@ -233,9 +137,9 @@ tr:nth-child(even) {
         <h2> Format Your Website </h2>
         <p>
           Now that you're familiar with everything, it's time to actually start building your website. First, you'd want to construct a clear structure and flow of logic.
-          And perhaps, if you're like me, a perfectionist and borderline mentally stable, you'd realize that lining up your text boxes is the next hardest thing to waking up in the morning.
+          And perhaps, if you're like me, a perfectionist and borderline mentally stable, you'd realize that lining up your textboxes is the next hardest thing to waking up in the morning.
           If you haven't noticed already, the white bar to the left of this article is actually way thicker than the bar on the top, and at this point, I've lost all will to fix that problem ---
-          this is something you'll just have to live with. However, there are some ways (currently) you can make this calamity a little more livable, and that is using the style options padding and border.
+          misalignment is just something you'll just have to live with for now. However, there are some ways you can make this calamity a little more livable, and that is using the style options: padding and border.
           <br><br>
           In short, these options allow you to change the gap between the textboxes, but from my experience, it is extremely gimmicky. There are many units you can use to determine the amount of padding
           and the width of your borders. The ones that I am familiar with include:
@@ -263,7 +167,7 @@ tr:nth-child(even) {
           </table>
           <hr>
           In my opinion, you should never use pixel as the format will definitely mess up for different devices. % is also kind of gimmicky, so try to stick with vh and vw.
-          Remember these units if you don't want to end up creating this abomination: <hr>
+          Remember these units if you don't want to create this abomination: <hr>
           <img alt="bad borders" src="https://i.stack.imgur.com/51Ner.png">
         </p>
     </div>
@@ -273,7 +177,7 @@ tr:nth-child(even) {
         <p>
           Great, now you have a format for your website, but what are you actually going to write about? What will be your website's theme?
           Compared to aligning textboxes, this is 10 times worse! Not only do you not have any creativity, you also probably have nonexistent work ethic. Or maybe it's just me.
-          ...Anyway, your workflow might look like something like:
+          ...Anyway, your workflow will probably look like something like:
           <ol>
             <li> Think of a new theme </li>
             <li> Doubt your theme </li>
@@ -284,23 +188,27 @@ tr:nth-child(even) {
           How do you prevent this from happening, you ask? Well, I have no idea! Some things that helped me, however, were looking at
           <a href="https://www.youtube.com/watch?v=JikG6i7TTSc&ab_channel=Jojo%27sASMR">website templates</a> online and asking other people what
           they were working on. Obviously, I'm not encouraging you to copy them, but it is helpful to seek inspiration. Also, don't second guess
-          yourself too much; starting working on an idea once it comes up, and scrap it later on if you decide that you don't like it. <br><br>
-          Guess what happens on you finalized a theme for your website? Another block! While you do have everything set up, you didn't plan to say anything in particular.
-          Because of this, you'll end up like me, working on this website at 2 a.m. and at a rate of 5 minutes per sentence. Aren't I so lucky?
+          yourself too much; start working on an idea once it comes up, and scrap it later on if you decide that you don't like it. <br><br>
+          Guess what happens on you finalized a theme for your website? Another block! While you do have everything organized and set up, you didn't plan
+          what you are going to say specifically, so now you'll just have to wing it. And because you'll be working at a rate of 5 minutes per sentence, you'll end
+          up like me, running away from my other responsibilities to be stuck doing this at 2 a.m. Something similar to the last tip that might help is to try to write
+          everything in one go and as fast as possible, and then revisit the content later on and revise. No, this isn't English class, but this definitely helped me improve
+          my efficiency (even so, I wasn't very efficient).
         </p>
     </div>
 
     <div class='article' id='5'>
       <h2> Create Your Website </h2>
       <p>
-        WOOOOOOOOOOOOOOO! You've finished building your website. Your brain is too racked to care whether it's good or not anymore, and all you think about is sleep.
-        You know in fact, I am going to bed right now. Whether I leave this part in or not is unclear, but if you're (Dr. J) reading this, then that means I have either
+        Congratulations! You've finished building your website. This is the point where you start to question if all the effort was worth it. Maybe you could've gone with a simpler idea or theme,
+        but I guess you wanted to do this to yourself. Your brain is too dead to care whether it's good or not anymore, and all you can think about is sleep.
+        You know, in fact, I am going to bed right now. Whether I leave this part in or not is unclear, but if you're somehow reading this, then that means I have either
         <ol>
           <li> Forgot about this text </li>
           <li> Became too lazy to remove it </li>
           <li> Left it in intentionally for comedic effect </li>
         </ol>
-      That's it, I'm really tired now. Goodnight.
+      It's probably going to be a combination of 2 and 3. That's it, I'm really tired now. I hope you liked my website, goodnight.
       </p>
       <img alt="Winnie the Pooh does Gangnam Style (idk man)" src="https://thumbs.gfycat.com/AjarTautAssassinbug-size_restricted.gif">
     </div>
@@ -308,4 +216,4 @@ tr:nth-child(even) {
   </div>
 
 </body>
-<html>
+</html>
