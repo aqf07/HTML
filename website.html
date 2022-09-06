@@ -17,7 +17,11 @@
       for (i = 0; i < links.length; i++)
         links[i].className = links[i].className.replace(" active", "");
 
-      document.getElementById(id).style.display = "block";
+      var article = document.getElementById(id);
+      var nav = document.getElementById('nav');
+      article.style.display = "block";
+      var height = article.clientHeight;
+      nav.style.height = height + "px";
       event.currentTarget.className += " active";
     }
   </script>
@@ -41,7 +45,7 @@
     </p>
   </div>
 
-  <nav>
+  <nav id='nav'>
     <h3> Table of Contents </h3>
     <button class="link" onclick="openTab(event, '1')"> Intrigue </button>
     <button class="link" onclick="openTab(event, '2')"> Curiousity </button>
@@ -111,7 +115,7 @@
           Now, after some learning and experimentation, you probably have a rough idea of what most tags mean and how they work. <i>However</i>, your website probably
           looks something like this:
           <hr>
-          <iframe src="example.html" width=400px height=390px></iframe>
+          <iframe src="example.html" width=100%></iframe>
           <hr>
           And something like that, is absolutely terrible. Where are all the colors, the fonts, the style?
           <b>Style</b> is a tag attribute that adds styles to an element in HTML. With style, you can change colors, fonts, sizes, backgrounds, and way more.
@@ -168,7 +172,7 @@
           <hr>
           In my opinion, you should never use pixel as the format will definitely mess up for different devices. % is also kind of gimmicky, so try to stick with vh and vw.
           Remember these units if you don't want to create this abomination: <hr>
-          <img alt="bad borders" src="https://i.stack.imgur.com/51Ner.png">
+          <img alt="bad borders" src="https://i.stack.imgur.com/51Ner.png" width=100%>
         </p>
     </div>
 
@@ -210,7 +214,7 @@
         </ol>
       It's probably going to be a combination of 2 and 3. That's it, I'm really tired now. I hope you liked my website, goodnight.
       </p>
-      <img alt="Winnie the Pooh does Gangnam Style (idk man)" src="https://thumbs.gfycat.com/AjarTautAssassinbug-size_restricted.gif">
+      <img alt="Winnie the Pooh does Gangnam Style (idk man)" width=100% src="https://thumbs.gfycat.com/AjarTautAssassinbug-size_restricted.gif">
     </div>
 
   </div>
